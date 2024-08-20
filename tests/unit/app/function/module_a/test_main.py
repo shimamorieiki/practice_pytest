@@ -1,6 +1,6 @@
-from app.function.module_a.main import main
+from app.function.module_a.main_a import main
 
 
-class TestMain:
+class TestMainA:
     def test_main(self):
         print(main())
