@@ -1,4 +1,4 @@
-from app.function.module_b.models.model_b import ModelB
+from models.model_b import ModelB
 
 
 def main():
