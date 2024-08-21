@@ -1,8 +1,13 @@
 import sys
 import os
 
-# キャッシュを削除して再importする
-sys.modules.pop("models.model_a")
+
+if "config" in sys.modules:
+    sys.modules.pop("config")
+
+if "models.model_a" in sys.modules:
+    # キャッシュを削除して再importする
+    sys.modules.pop("models.model_a")
 
 # 絶対パスを指定する
 models_path = os.path.abspath(f"{os.getcwd()}/app/function/supermodule_y/module_a")

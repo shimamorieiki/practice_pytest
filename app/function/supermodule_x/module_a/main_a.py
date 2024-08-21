@@ -1,10 +1,12 @@
 from models.model_a import ModelA
+import config as function_config
 
 
 def main():
     m = ModelA()
     a = m.run()
-    print(a)
+
+    print(f"run: {a}, {function_config.ENV_X_A=}")
     return a
 
 
